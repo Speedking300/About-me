@@ -1,0 +1,384 @@
+/* Cyberpunk-Stil */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Hintergrund Animation */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+}
+
+/* Hauptcontainer */
+.container {
+    position: relative;
+    padding-top: 15vh;
+}
+
+/* Titel */
+h1 {
+    font-size: 40px;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+/* Untertitel */
+.subtitle {
+    font-size: 14px;
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons {
+    margin-bottom: 30px;
+}
+
+/* About Me Box */
+.about {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid cyan;
+    padding: 20px;
+    display: inline-block;
+    box-shadow: 0 0 10px cyan;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.about h2 {
+    color: magenta;
+}
+
+/* Werbung rechts unten */
+.advertisement {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Inline-Werbung im About Me-Bereich */
+.advertisement-inline {
+    font-size: 12px;
+    color: #fff;
+    text-shadow: 0 0 3px #ff00ff, 0 0 5px #ff00ff;
+    margin-top: 10px;
+}
+
+.advertisement-inline a {
+    text-decoration: none;
+    color: cyan;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.advertisement-inline a:hover {
+    color: magenta;
+}
+
+/* Discord-Profil */
+.discord-profile {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 10px cyan;
+    margin: 20px auto;
+    text-align: left;
+}
+
+/* Avatar */
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid cyan;
+    margin-right: 10px;
+}
+
+/* Benutzername */
+.user-info h2 {
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+}
+
+/* Badges */
+.badges {
+    margin-top: 5px;
+}
+
+.badge {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Musik-Button */
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    font-size: 12px;
+    font-family: 'Press Start 2P', cursive;
+    color: cyan;
+    background: black;
+    border: 2px solid cyan;
+    box-shadow: 0 0 10px cyan;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.music-btn:hover {
+    background: cyan;
+    color: black;
+}
+
+/* Lila Overlay für Button-Klick */
+/* Grundlegende Button-Stile */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 2px solid;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.github {
+    color: cyan;
+    border-color: cyan;
+}
+
+.discord {
+    color: magenta;
+    border-color: magenta;
+}
+
+.github:hover {
+    background: cyan;
+    color: black;
+}
+
+.discord:hover {
+    background: magenta;
+    color: black;
+}
+
+/* Animation für den expandierenden Farbkreis */
+.btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: inherit;  /* Erbt die Hintergrundfarbe des Buttons */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+    z-index: 0;
+}
+
+.btn:hover:after {
+    width: 500%;
+    height: 500%;
+}
+
+/* Der Text bleibt über dem expandierenden Kreis */
+.btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Lila Overlay für die Animation */
+/* Grundlegende Button-Stile */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 2px solid;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.github {
+    color: cyan;
+    border-color: cyan;
+}
+
+.discord {
+    color: magenta;
+    border-color: magenta;
+}
+
+.github:hover {
+    background: rgba(0, 255, 255, 0.651);
+    color: black;
+}
+
+.discord:hover {
+    background: rgba(255, 0, 255, 0.575);
+    color: black;
+}
+
+/* Animation für den expandierenden Farbkreis */
+.btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: inherit;  /* Erbt die Hintergrundfarbe des Buttons */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+    z-index: 0;
+}
+
+.btn:hover:after {
+    width: 500%;
+    height: 500%;
+}
+
+/* Der Text bleibt über dem expandierenden Kreis */
+.btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Lila Overlay für die Animation */
+.overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 0, 128, 0.9); /* Lila */
+    display: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Aktivierung des Overlays */
+.overlay2.active {
+    opacity: 1;
+}
+
+
+/* Neues Overlay für die Info-Box */
+.info-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 0, 128, 0.9); /* Lila */
+    display: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Aktivierung des neuen Info-Overlays */
+.info-overlay.active {
+    opacity: 1;
+    display: block;
+}
+
+/* Stil für das Informationsfeld */
+.info-box {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid cyan;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none;
+}
+
+.info-box h2 {
+    color: magenta;
+    font-size: 24px;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+.info-box p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Stil für den Schließen-Link */
+.close-info {
+    font-size: 18px;
+    color: #ff4f4f;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+.close-info:hover {
+    color: #ff1a1a;
+}
+
+/* Stil für den klickbaren Text, der rechts unten erscheint */
+.info-text {
+    font-size: 12.3px;
+    color: cyan;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.info-text:hover {
+    color: #00b8b8;
+}
+
+
+
