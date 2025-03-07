@@ -12,7 +12,7 @@ body {
     font-family: 'Press Start 2P', cursive;
     color: #fff;
     text-align: center;
-    overflow-y: scroll;
+    overflow: auto;
 }
 
 /* Hintergrund Animation */
