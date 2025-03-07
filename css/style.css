@@ -27,7 +27,10 @@ body {
 /* Hauptcontainer */
 .container {
     position: relative;
-    padding-top: 15vh;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Titel */
@@ -51,35 +54,22 @@ h1 {
 }
 
 /* About Me Box */
-.about {
+.about, .skills {
     background: rgba(0, 0, 0, 0.8);
     border: 2px solid cyan;
-    padding: 29px;
+    padding: 34px;
     display: inline-block;
     box-shadow: 0 0 10px cyan;
-    margin-top: 20px;
+    margin-top: 40px;
     width: 80%;
-    max-width: 1000px;
+    max-width: 600px;
 }
 
-.about h2 {
+.about h2, .skills h2 {
     color: magenta;
 }
 
 /* Werbung rechts unten */
-.advertisement {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 16px;
-    color: #fff;
-    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 5px;
-}
-
-/* Inline-Werbung im About Me-Bereich */
 .advertisement-inline {
     font-size: 12px;
     color: #fff;
@@ -102,22 +92,23 @@ h1 {
 .discord-profile {
     display: flex;
     align-items: center;
+    justify-content: center;
     background: rgba(0, 0, 0, 0.7);
     padding: 15px;
     border-radius: 10px;
-    width: 250px;
+    width: 300px;
     box-shadow: 0 0 10px cyan;
-    margin: 20px auto;
+    margin-top: 40px;
     text-align: left;
 }
 
 /* Avatar */
 .avatar {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: 2px solid cyan;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 /* Benutzername */
@@ -135,7 +126,7 @@ h1 {
 .badge {
     width: 20px;
     height: 20px;
-    margin-right: 5px;
+    margin-right: 3px;
 }
 
 /* Musik-Button */
@@ -159,70 +150,7 @@ h1 {
     color: black;
 }
 
-/* Lila Overlay für Button-Klick */
-/* Grundlegende Button-Stile */
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px 20px;
-    margin: 5px;
-    border: 2px solid;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.github {
-    color: cyan;
-    border-color: cyan;
-}
-
-.discord {
-    color: magenta;
-    border-color: magenta;
-}
-
-.github:hover {
-    background: cyan;
-    color: black;
-}
-
-.discord:hover {
-    background: magenta;
-    color: black;
-}
-
-/* Animation für den expandierenden Farbkreis */
-.btn:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background: inherit;  /* Erbt die Hintergrundfarbe des Buttons */
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.5s, height 0.5s;
-    z-index: 0;
-}
-
-.btn:hover:after {
-    width: 500%;
-    height: 500%;
-}
-
-/* Der Text bleibt über dem expandierenden Kreis */
-.btn span {
-    position: relative;
-    z-index: 1;
-}
-
-/* Lila Overlay für die Animation */
-/* Grundlegende Button-Stile */
+/* Buttons */
 .btn {
     display: inline-block;
     text-decoration: none;
@@ -265,7 +193,7 @@ h1 {
     left: 50%;
     width: 300%;
     height: 300%;
-    background: inherit;  /* Erbt die Hintergrundfarbe des Buttons */
+    background: inherit;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     transition: width 0.5s, height 0.5s;
@@ -277,53 +205,30 @@ h1 {
     height: 500%;
 }
 
-/* Der Text bleibt über dem expandierenden Kreis */
 .btn span {
     position: relative;
     z-index: 1;
 }
 
-/* Lila Overlay für die Animation */
-.overlay2 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(128, 0, 128, 0.9); /* Lila */
-    display: none;
-    z-index: 9999;
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
-/* Aktivierung des Overlays */
-.overlay2.active {
-    opacity: 1;
-}
-
-
-/* Neues Overlay für die Info-Box */
+/* Info-Box */
 .info-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(128, 0, 128, 0.9); /* Lila */
     display: none;
     z-index: 9999;
     opacity: 0;
     transition: opacity 1s ease;
+    pointer-events: none; /* Klicks ignorieren */
 }
 
-/* Aktivierung des neuen Info-Overlays */
 .info-overlay.active {
     opacity: 1;
     display: block;
 }
 
-/* Stil für das Informationsfeld */
 .info-box {
     background: rgba(0, 0, 0, 0.8);
     border: 2px solid cyan;
@@ -337,6 +242,7 @@ h1 {
     transform: translate(-50%, -50%);
     z-index: 1000;
     display: none;
+    pointer-events: auto; /* Klicks nur in der Box erlauben */
 }
 
 .info-box h2 {
@@ -350,7 +256,6 @@ h1 {
     line-height: 1.5;
 }
 
-/* Stil für den Schließen-Link */
 .close-info {
     font-size: 18px;
     color: #ff4f4f;
@@ -363,23 +268,65 @@ h1 {
     color: #ff1a1a;
 }
 
-/* Stil für den klickbaren Text, der rechts unten erscheint */
-.info-text {
-    font-size: 12.3px;
-    color: cyan;
-    text-decoration: underline;
-    cursor: pointer;
-    font-weight: bold;
-    transition: color 0.3s;
+#info-overlay {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dunkler Hintergrund */
+    display: none; /* Standardmäßig unsichtbar */
+    z-index: 999; /* Damit es über allem liegt */
 }
+
+#info-overlay.active {
+    display: block;
+}
+
+/* Verhindert Scrollen, wenn die Info-Box offen ist */
+.no-scroll {
+    overflow: hidden;
+}
+
+.info-text {
+    color: #00ccff;
+    text-shadow: 0 0 10px #00bdecb7;
+    font-size: 10px;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: right; /* Text an den rechten Rand ausrichten */
+    margin-left: auto; /* Block nach rechts verschieben */
+    padding-right: 10px; /* Abstand zum rechten Rand innerhalb des Elements */
+}
+
 
 .info-text:hover {
-    color: #00b8b8;
+    cursor: pointer;
+    color: #0084ff;
 }
 
+/* Fortschrittsbalken */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+}
 
+/* Fortschrittsanimation */
+.progress {
+    height: 100%;
+    background: magenta;
+    border-radius: 10px;
+    transition: width 1.5s ease-in-out;
+}
 
+.skills {
+    height: 240px;
+}
 
+.skills h2 {
+    margin-bottom: 20px;
+}
