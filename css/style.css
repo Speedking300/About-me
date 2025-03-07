@@ -54,12 +54,12 @@ h1 {
 .about {
     background: rgba(0, 0, 0, 0.8);
     border: 2px solid cyan;
-    padding: 20px;
+    padding: 29px;
     display: inline-block;
     box-shadow: 0 0 10px cyan;
     margin-top: 20px;
     width: 80%;
-    max-width: 5000px;
+    max-width: 1000px;
 }
 
 .about h2 {
