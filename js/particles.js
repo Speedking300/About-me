@@ -1,13 +1,13 @@
 particlesJS('particles-js', {
     particles: {
         number: { value: 100 },
-        color: { value: "#00ffff" },
+        color: { value: "#000000" },
         shape: { type: "circle" },
         opacity: { value: 0.5, random: true },
-        size: { value: 3, random: true },
+        size: { value: 5, random: true },
         move: {
             enable: true,
-            speed: 1,
+            speed: 2,
             direction: "none",
             random: false,
             straight: false,
@@ -28,7 +28,6 @@ let typed = new Typed(".subtitle", {
         "WEB DEV",
         "ROBLOX LUAU GAME DEV ",
         "LOVE TO CODE",
-        "WEB DEV",
         "DISCORD BOT DEV"
     ],
     typeSpeed: 40,         // Langsameres Tippen für bessere Lesbarkeit

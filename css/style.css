@@ -41,7 +41,7 @@ h1 {
 .subtitle {
     font-size: 14px;
     color: cyan;
-    text-shadow: 0 0 10px cyan;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.705);
     margin-bottom: 20px;
 }
 
@@ -59,7 +59,7 @@ h1 {
     box-shadow: 0 0 10px cyan;
     margin-top: 20px;
     width: 80%;
-    max-width: 500px;
+    max-width: 5000px;
 }
 
 .about h2 {
@@ -379,6 +379,7 @@ h1 {
 .info-text:hover {
     color: #00b8b8;
 }
+
 
 
 
