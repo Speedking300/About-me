@@ -28,7 +28,8 @@ let typed = new Typed(".subtitle", {
         "WEB DEV",
         "ROBLOX LUAU GAME DEV ",
         "LOVE TO CODE",
-        "DISCORD BOT DEV"
+        "DISCORD BOT DEV",
+        "3D Modeler"
     ],
     typeSpeed: 40,         // Langsameres Tippen für bessere Lesbarkeit
     backSpeed: 20,         // Langsames Löschen für einen sanfteren Effekt
