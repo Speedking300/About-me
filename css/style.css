@@ -486,3 +486,120 @@ section { padding: 120px 0; position: relative; }
     font-size: 1.1rem;
     color: white;
 }
+
+/* --- ULTIMATE MOBILE OPTIMIZATION --- */
+
+@media (max-width: 768px) {
+    /* 1. Custom Cursor auf Touch-Geräten deaktivieren */
+    #cursor-dot, #cursor-outline {
+        display: none !important;
+    }
+    * {
+        cursor: auto !important; /* Standard-Cursor zurückbringen */
+    }
+
+    /* 2. Navigation anpassen */
+    .nav-links {
+        display: none; /* Versteckt die Links, um Platz zu sparen - optional kannst du ein Burger-Menü bauen */
+    }
+    
+    .nav-container {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* 3. Hero Section (Text & Karte untereinander) */
+    header {
+        padding-top: 120px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.8rem; /* Kleinerer Text für Handys */
+        line-height: 1.1;
+    }
+
+    p {
+        font-size: 1rem;
+        margin: 0 auto 30px;
+    }
+
+    .hero-main {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hero-actions {
+        flex-direction: column; /* Buttons untereinander */
+        width: 100%;
+    }
+
+    .btn-main, .btn-sub {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 4. Discord Card Fix */
+    .discord-card {
+        width: 100%; /* Volle Breite auf kleinen Schirmen */
+        max-width: 350px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .avatar-container {
+        width: 70px;
+        height: 70px;
+    }
+
+    .user-details h2 {
+        font-size: 1.2rem;
+    }
+
+    /* 5. Projects & About Grid */
+    .projects-grid {
+        grid-template-columns: 1fr; /* Nur eine Spalte */
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .stat-item h4 {
+        font-size: 1.5rem;
+    }
+
+    /* 6. Footer & Modal */
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .modal-card {
+        width: 90%;
+        padding: 25px;
+    }
+}
+
+/* Fix für sehr kleine Handys */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .badge {
+        font-size: 0.6rem;
+    }
+}
+
+.grid-overlay {
+    background-size: 30px 30px; /* Kleineres Raster für kleine Bildschirme */
+    opacity: 0.5;
+}
