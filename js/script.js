@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
     const percentTxt = document.querySelector('.percent');
 
     const loaderInterval = setInterval(() => {
-        progress += Math.floor(Math.random() * 12) + 1;
+        progress += Math.floor(Math.random() * 5) + 1;
         
         if (progress >= 100) {
             progress = 100;
@@ -79,3 +79,57 @@ async function updatePresence() {
 
 setInterval(updatePresence, 2000);
 updatePresence();
+
+// PROJECT FILTERING
+function filterProjects(category) {
+    const cards = document.querySelectorAll('.project-card');
+    const buttons = document.querySelectorAll('.tab-btn');
+
+    // Update Buttons
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    // Filter Cards
+    cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'scale(0.9)';
+        
+        setTimeout(() => {
+            if (category === 'all' || card.classList.contains(category)) {
+                card.style.display = 'block';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'scale(1)';
+                }, 50);
+            } else {
+                card.style.display = 'none';
+            }
+        }, 300);
+    });
+}
+
+// SCROLL REVEAL OBSERVER
+const observerOptions = { threshold: 0.1 };
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// CREDITS MODAL TOGGLE
+function toggleCredits() {
+    const modal = document.getElementById('credits-modal');
+    modal.classList.toggle('active');
+}
+
+// Close modal when clicking outside of the card
+window.onclick = function(event) {
+    const modal = document.getElementById('credits-modal');
+    if (event.target == modal) {
+        modal.classList.remove('active');
+    }
+}

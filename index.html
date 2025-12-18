@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SYNAPSE DEV | Premium Portfolio</title>
+    <title>BOLT DEV | About me</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,10 +12,8 @@
 
     <div id="loader-wrapper">
         <div class="loader-content">
-            <div class="loader-logo">SYNAPSE<span>DEV</span></div>
-            <div class="loader-progress-container">
-                <div class="loader-progress-bar"></div>
-            </div>
+            <div class="loader-logo">BOLT<span>DEV</span></div>
+            <div class="loader-progress-container"><div class="loader-progress-bar"></div></div>
             <div class="loader-status">INITIALIZING SYSTEMS... <span class="percent">0%</span></div>
         </div>
     </div>
@@ -28,45 +26,41 @@
 
     <nav class="glass-nav">
         <div class="nav-container">
-            <div class="logo">SYNAPSE<span>DEV</span></div>
+            <div class="logo">BOLT<span>DEV</span></div>
             <ul class="nav-links">
                 <li><a href="#home" class="nav-item">Home</a></li>
                 <li><a href="#projects" class="nav-item">Projects</a></li>
                 <li><a href="#about" class="nav-item">About</a></li>
             </ul>
-            <a href="https://github.com" target="_blank" class="github-pill">
-                <i class="fab fa-github"></i> <span>GitHub</span>
-            </a>
+            <a href="https://github.com/Speedking300" class="github-pill"><i class="fab fa-github"></i> <span>GitHub</span></a>
         </div>
     </nav>
 
     <header id="home">
-        <div class="hero-wrapper">
-            <div class="hero-main">
-                <div class="hero-text-content">
-                    <div class="badge animate-init">WEB3 & SOFTWARE ARCHITECT</div>
-                    <h1 class="animate-init">Crafting <span class="gradient-text">Digital</span><br>Experience</h1>
-                    <p class="animate-init">Building high-end web applications with immersive user interfaces and seamless performance.</p>
+        <div class="hero-wrapper"> <div class="hero-main"> <div class="hero-text-content">
+                    <div class="badge animate-init">WEB3 & DISCORD BOT DEVELOPER</div>
+                    <h1 class="animate-init">Crafting <span class="gradient-text">Digital</span> Futures</h1>
+                    <p class="animate-init">I am Bolt Dev a 13 Year Old Teenager that likes to Code anything. From Websites to Discord Bots.</p>
                     <div class="hero-actions animate-init">
-                        <a href="#projects" class="btn-main">Explore Work <i class="fas fa-arrow-right"></i></a>
-                        <a href="#contact" class="btn-sub">Contact Me</a>
+                        <a href="#projects" class="btn-main">View Work</a>
+                        <a href="#about" class="btn-sub">About Me</a>
                     </div>
                 </div>
 
                 <div class="hero-visual animate-init">
-                    <div id="discord-profile" class="glass-card discord-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
+                    <div id="discord-profile" class="glass-card discord-card">
                         <div class="card-header">
                             <div class="status-badge">LIVE STATUS</div>
                             <div class="discord-tag"><i class="fab fa-discord"></i></div>
                         </div>
                         <div class="profile-main">
                             <div class="avatar-container">
-                                <img id="discord-avatar" src="https://via.placeholder.com/100" alt="Avatar">
-                                <div id="status-indicator" class="status-offline"></div>
+                                <img id="discord-avatar" src="" alt="Avatar">
+                                <div id="status-indicator"></div>
                             </div>
                             <div class="user-details">
-                                <h2 id="discord-name">Loading...</h2>
-                                <p id="discord-status-text">OFFLINE</p>
+                                <h2 id="discord-name">speedking300</h2>
+                                <p id="discord-status-text">ONLINE</p>
                             </div>
                         </div>
                         <div id="spotify-widget" class="spotify-container">
@@ -74,20 +68,91 @@
                                 <div class="spot-icon"><i class="fab fa-spotify"></i></div>
                                 <div class="spot-text">
                                     <span class="spot-label">LISTENING TO</span>
-                                    <span id="spotify-song">Nothing at the moment</span>
+                                    <span id="spotify-song">No music playing</span>
                                 </div>
                             </div>
-                            <div class="spot-progress">
-                                <div id="spotify-bar" class="spot-bar-fill"></div>
-                            </div>
+                            <div class="spot-progress"><div id="spotify-bar" class="spot-bar-fill"></div></div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </header>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <section id="projects" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">MY ARSENAL</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            </div>
+            <div class="filter-tabs">
+                <button class="tab-btn active" onclick="filterProjects('all')">All Projects</button>
+                <button class="tab-btn" onclick="filterProjects('web')">Web Apps</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card web">
+                    <div class="project-img"><div class="project-overlay"><a href="#"><i class="fas fa-link"></i></a></div></div>
+                    <div class="project-content">
+                        <span class="category"></span>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="reveal">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-frame"><div class="placeholder-img"></div></div>
+                </div>
+                <div class="about-info">
+                    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                    <p>Building the future of the web.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item"><h4>1+</h4><p>Years Exp.</p></div>
+                        <div class="stat-item"><h4>20+</h4><p>Projects</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 <span class="gradient-text">Bolt Dev</span>. All rights reserved.</p>
+            <button class="credits-trigger" onclick="toggleCredits()">
+                <i class="fas fa-info-circle"></i> Credits
+            </button>
+        </div>
+    </footer>
+
+    <div id="credits-modal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>System <span class="gradient-text">Credits</span></h3>
+                <button class="close-modal" onclick="toggleCredits()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="credit-item">
+                    <span>Design & Code</span>
+                    <p>Speedking / Bolt Dev</p>
+                </div>
+                <div class="credit-item">
+                    <span>Core Framework</span>
+                    <p>HTML5, CSS3, Vanilla JS</p>
+                </div>
+                <div class="credit-item">
+                    <span>Data Systems</span>
+                    <p>Lanyard API & FontAwesome</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>
