@@ -20,7 +20,7 @@ I'm **Bolt Dev**, a 13-year-old developer passionate about crafting digital expe
 ### 🛠️ Tech Stack
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,discordjs,git,vscode,figma" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,discord,vscode,python" />
 </p>
 
 ---
