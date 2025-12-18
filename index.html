@@ -3,96 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Premium Portfolio | 2025</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/Speedking_Profile_COPYRIGHT.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+    
 </head>
 <body>
+    <div id="custom-cursor"></div>
+    <div class="background-wrapper">
+        <div class="glow-circle one"></div>
+        <div class="glow-circle two"></div>
+    </div>
 
+    <nav>
+        <div class="logo">MY<span>SPACE</span></div>
+        <ul>
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="https://github.com/DEIN_NAME" target="_blank" class="nav-github"><i class="fab fa-github"></i> GitHub</a></li>
+        </ul>
+    </nav>
 
-    <!-- Hintergrund Animation -->
-    <div id="particles-js"></div>
-
-    <!-- Hauptinhalt -->
-    <div class="container">
-        <h1>Speedking</h1>
-        <p class="subtitle">ABOUT ME</p>
-
-        <div class="buttons">
-            <a href="https://github.com/Speedking300" class="btn github">GitHub</a>
-            <a href="https://discord.gg/kbn8pW7SWj" class="btn discord">Discord</a>
-        </div>
-
-        
-        <div class="about">
-            <h2>&lt;About_Me&gt;</h2>
-            <p>----------------------------</p>
-            <p>I'm a Game dev on Roblox. Also i'm a Discord bot dev and love to Code for fun.</p>
-            <p class="advertisement-inline"><a href="https://v4n1tzy-portfolio.netlify.app/" target="_blank">Inspired by v4n1tzy</a></p>
-        </div>
-
-        <div class="skills">
-            <h2>&lt;Skills&gt;</h2>
-            <p>Web Development</p>
-            <div class="progress-bar">
-                <div class="progress" style="width: 60%;"></div>
+    <header id="home">
+        <div class="hero-container">
+            <div class="hero-text fade-in">
+                <span class="badge"></span>
+                <h1>Hi, I'm <span class="highlight">Speedking</span></h1>
+                <p>Digital Creator & Developer specializing in immersive web experiences.</p>
+                <div class="btn-group">
+                    <a href="#projects" class="btn primary-btn">View My Work <i class="fas fa-arrow-right"></i></a>
+                    <a href="#about" class="btn glass-btn">Learn More</a>
+                </div>
             </div>
-            <p class="progress-bar2-text">Roblox Luau</p>
-            <div class="progress-bar2">
-                <div class="progress" style="width: 46%;"></div>
-            </div>
-        </div>
 
-        <div class="discord-profile">
-            <img class="avatar" src="img/Speedking_Profile_COPYRIGHT.jpg" alt="Avatar">
-            <div class="user-info">
-                <h2>Speedking</h2>
-                <div class="badges">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Discord_Active_Developer_Badge.svg" alt="Badge 1" class="badge">
-                    <img src="https://img.icons8.com/fluent/512/discord-hypesquad-bravery-house-badge.png" alt="Badge 2" class="badge">
-                    <img src="https://cdn3.emoji.gg/emojis/66366-completed-a-quest.png" alt="Badge 3" class="badge">
+            <div id="discord-profile" class="profile-card fade-in-right">
+                <div class="profile-header">
+                    <div class="avatar-container">
+                        <img id="discord-avatar" src="" alt="Avatar">
+                        <div id="status-dot" class="status-offline"></div>
+                    </div>
+                    <div class="profile-info">
+                        <h2 id="discord-name">Loading...</h2>
+                        <div class="status-badge" id="discord-status">OFFLINE</div>
+                    </div>
+                </div>
+
+                <div id="activity-container" class="activity-box" style="display: none;">
+                    <img id="activity-icon" src="" alt="">
+                    <div class="activity-text">
+                        <span id="activity-name">...</span>
+                        <span id="activity-details">...</span>
+                    </div>
+                </div>
+
+                <div id="spotify-container" class="spotify-box" style="display: none;">
+                    <div class="spotify-header">
+                        <i class="fab fa-spotify"></i>
+                        <span id="spotify-details">Spotify</span>
+                    </div>
+                    <div class="progress-wrapper">
+                        <div class="progress-bar"><div id="spotify-progress-bar" class="progress-fill"></div></div>
+                        <div class="time-labels">
+                            <span id="spotify-current-time">0:00</span>
+                            <span id="spotify-total-time">0:00</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </header>
 
-        <p id="info-text" class="info-text">Information</p>
-
-        <div id="info-overlay" class="info-overlay"></div> <!-- Neues Overlay für die Info-Box -->
-        
-        <div id="info-box" class="info-box" style="display:none;">
-            <h2>Information</h2>
-            <p>You can contact me on Discord my username is: speedking300 😉</p>
-            <p id="close-info" class="close-info">Close</p>
-        </div>
-    
-        </div>
+    <section id="projects" class="scroll-reveal">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="tab-container">
+            <button class="tab-btn active" onclick="filterProjects('all')">All</button>
+            <button class="tab-btn" onclick="filterProjects('coding')">Coding</button>
+            <button class="tab-btn" onclick="filterProjects('gaming')">Gaming</button>
         </div>
 
-    
+        <div class="projects-grid">
+            <div class="project-card coding scroll-reveal">
+                <div class="project-icon"><i class="fas fa-code"></i></div>
+                <h3>Advanced Discord Bot</h3>
+                <p>A high-performance bot with dashboard integration.</p>
+                <div class="project-tags"><span>Node.js</span><span>MongoDB</span></div>
+            </div>
+            <div class="project-card gaming scroll-reveal">
+                <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+                <h3>Cyber Environment</h3>
+                <p>Immersive 3D map design for FPS titles.</p>
+                <div class="project-tags"><span>UE5</span><span>Blender</span></div>
+            </div>
+        </div>
+    </section>
 
-        
+    <section id="about" class="scroll-reveal">
+        <div class="about-card">
+            <h2>About Me</h2>
+            <p>I'm a passionate developer focused on creating clean, efficient, and beautiful digital solutions. My goal is to bridge the gap between functionality and aesthetics.</p>
+        </div>
+    </section>
 
-    
-
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="js/particles.js"></script>
-    <script src="js/music.js"></script>
-    <script src="js/particles.js"></script>
-
-
-
-</body>
-</html>
-
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="js/particles.js"></script>
-    <script src="js/music.js"></script>
-    <script src="js/information.js"></script>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
