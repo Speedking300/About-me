@@ -1,6 +1,6 @@
 const DISCORD_ID = "1181986720221253666";
 
-// CUSTOM CURSOR
+// --- CUSTOM CURSOR ---
 const dot = document.getElementById('cursor-dot');
 const outline = document.getElementById('cursor-outline');
 
@@ -17,7 +17,7 @@ window.addEventListener('mousemove', (e) => {
     }, { duration: 500, fill: "forwards" });
 });
 
-// LOADER LOGIC
+// --- LOADER LOGIC ---
 window.addEventListener('load', () => {
     let progress = 0;
     const bar = document.querySelector('.loader-progress-bar');
@@ -35,12 +35,12 @@ window.addEventListener('load', () => {
             }, 500);
         }
         
-        bar.style.width = progress + "%";
-        percentTxt.innerText = progress + "%";
+        if(bar) bar.style.width = progress + "%";
+        if(percentTxt) percentTxt.innerText = progress + "%";
     }, 60);
 });
 
-// LANYARD API (Discord Presence)
+// --- LANYARD API (Discord Presence) ---
 async function updatePresence() {
     try {
         const response = await fetch(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`);
@@ -52,10 +52,29 @@ async function updatePresence() {
         document.getElementById('discord-name').innerText = data.discord_user.username;
         document.getElementById('discord-avatar').src = `https://cdn.discordapp.com/avatars/${DISCORD_ID}/${data.discord_user.avatar}.webp?size=160`;
         
-        // Status
+        // --- STATUS LOGIC FIX ---
         const statusEl = document.getElementById('status-indicator');
-        statusEl.className = `status-${data.discord_status}`;
-        document.getElementById('discord-status-text').innerText = data.discord_status.toUpperCase();
+        const statusText = document.getElementById('discord-status-text');
+        const currentStatus = data.discord_status; // online, dnd, idle, offline
+
+        // Klassen sauber wechseln
+        statusEl.className = ''; 
+        statusEl.classList.add(`status-${currentStatus}`);
+
+        // Texte & Farben je nach Status
+        if(currentStatus === 'dnd') {
+            statusText.innerText = "Do Not Disturb";
+            statusText.style.color = "#f04747";
+        } else if(currentStatus === 'idle') {
+            statusText.innerText = "IDLE / AWAY";
+            statusText.style.color = "#faa61a";
+        } else if(currentStatus === 'online') {
+            statusText.innerText = "ONLINE";
+            statusText.style.color = "#43b581";
+        } else {
+            statusText.innerText = "OFFLINE";
+            statusText.style.color = "#747f8d";
+        }
 
         // Spotify
         const spotWidget = document.getElementById('spotify-widget');
@@ -80,14 +99,14 @@ async function updatePresence() {
 setInterval(updatePresence, 2000);
 updatePresence();
 
-// PROJECT FILTERING
+// --- PROJECT FILTERING ---
 function filterProjects(category) {
     const cards = document.querySelectorAll('.project-card');
     const buttons = document.querySelectorAll('.tab-btn');
 
     // Update Buttons
     buttons.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
+    if(event) event.target.classList.add('active');
 
     // Filter Cards
     cards.forEach(card => {
@@ -108,7 +127,7 @@ function filterProjects(category) {
     });
 }
 
-// SCROLL REVEAL OBSERVER
+// --- SCROLL REVEAL OBSERVER ---
 const observerOptions = { threshold: 0.1 };
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -120,13 +139,12 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// CREDITS MODAL TOGGLE
+// --- CREDITS MODAL ---
 function toggleCredits() {
     const modal = document.getElementById('credits-modal');
-    modal.classList.toggle('active');
+    if(modal) modal.classList.toggle('active');
 }
 
-// Close modal when clicking outside of the card
 window.onclick = function(event) {
     const modal = document.getElementById('credits-modal');
     if (event.target == modal) {
