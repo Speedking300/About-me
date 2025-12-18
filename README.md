@@ -25,14 +25,6 @@ I'm **Bolt Dev**, a 13-year-old developer passionate about crafting digital expe
 
 ---
 
-### 📊 My Stats
-<p align="left">
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Speedking300&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Speedking300&layout=compact&theme=tokyonight&hide_border=true" />
-</p>
-
----
-
 ### 📱 Connect with me
 <p align="left">
   <a href="https://discord.com/users/1181986720221253666">
