@@ -1,73 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Portfolio | 2025</title>
+    <title>SYNAPSE DEV | Premium Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div id="custom-cursor"></div>
-    <div class="background-wrapper">
-        <div class="glow-circle one"></div>
-        <div class="glow-circle two"></div>
+<body class="loading">
+
+    <div id="loader-wrapper">
+        <div class="loader-content">
+            <div class="loader-logo">SYNAPSE<span>DEV</span></div>
+            <div class="loader-progress-container">
+                <div class="loader-progress-bar"></div>
+            </div>
+            <div class="loader-status">INITIALIZING SYSTEMS... <span class="percent">0%</span></div>
+        </div>
     </div>
 
-    <nav>
-        <div class="logo">MY<span>SPACE</span></div>
-        <ul>
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="https://github.com/DEIN_NAME" target="_blank" class="nav-github"><i class="fab fa-github"></i> GitHub</a></li>
-        </ul>
+    <div id="cursor-dot"></div>
+    <div id="cursor-outline"></div>
+
+    <div class="bg-glow"></div>
+    <div class="grid-overlay"></div>
+
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo">SYNAPSE<span>DEV</span></div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#projects" class="nav-item">Projects</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+            </ul>
+            <a href="https://github.com" target="_blank" class="github-pill">
+                <i class="fab fa-github"></i> <span>GitHub</span>
+            </a>
+        </div>
     </nav>
 
     <header id="home">
-        <div class="hero-container">
-            <div class="hero-text fade-in">
-                <span class="badge"></span>
-                <h1>Hi, I'm <span class="highlight">Speedking</span></h1>
-                <p>Digital Creator & Developer specializing in immersive web experiences.</p>
-                <div class="btn-group">
-                    <a href="#projects" class="btn primary-btn">View My Work <i class="fas fa-arrow-right"></i></a>
-                    <a href="#about" class="btn glass-btn">Learn More</a>
-                </div>
-            </div>
-
-            <div id="discord-profile" class="profile-card fade-in-right">
-                <div class="profile-header">
-                    <div class="avatar-container">
-                        <img id="discord-avatar" src="" alt="Avatar">
-                        <div id="status-dot" class="status-offline"></div>
-                    </div>
-                    <div class="profile-info">
-                        <h2 id="discord-name">Loading...</h2>
-                        <div class="status-badge" id="discord-status">OFFLINE</div>
+        <div class="hero-wrapper">
+            <div class="hero-main">
+                <div class="hero-text-content">
+                    <div class="badge animate-init">WEB3 & SOFTWARE ARCHITECT</div>
+                    <h1 class="animate-init">Crafting <span class="gradient-text">Digital</span><br>Experience</h1>
+                    <p class="animate-init">Building high-end web applications with immersive user interfaces and seamless performance.</p>
+                    <div class="hero-actions animate-init">
+                        <a href="#projects" class="btn-main">Explore Work <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn-sub">Contact Me</a>
                     </div>
                 </div>
 
-                <div id="activity-container" class="activity-box" style="display: none;">
-                    <img id="activity-icon" src="" alt="">
-                    <div class="activity-text">
-                        <span id="activity-name">...</span>
-                        <span id="activity-details">...</span>
-                    </div>
-                </div>
-
-                <div id="spotify-container" class="spotify-box" style="display: none;">
-                    <div class="spotify-header">
-                        <i class="fab fa-spotify"></i>
-                        <span id="spotify-details">Spotify</span>
-                    </div>
-                    <div class="progress-wrapper">
-                        <div class="progress-bar"><div id="spotify-progress-bar" class="progress-fill"></div></div>
-                        <div class="time-labels">
-                            <span id="spotify-current-time">0:00</span>
-                            <span id="spotify-total-time">0:00</span>
+                <div class="hero-visual animate-init">
+                    <div id="discord-profile" class="glass-card discord-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
+                        <div class="card-header">
+                            <div class="status-badge">LIVE STATUS</div>
+                            <div class="discord-tag"><i class="fab fa-discord"></i></div>
+                        </div>
+                        <div class="profile-main">
+                            <div class="avatar-container">
+                                <img id="discord-avatar" src="https://via.placeholder.com/100" alt="Avatar">
+                                <div id="status-indicator" class="status-offline"></div>
+                            </div>
+                            <div class="user-details">
+                                <h2 id="discord-name">Loading...</h2>
+                                <p id="discord-status-text">OFFLINE</p>
+                            </div>
+                        </div>
+                        <div id="spotify-widget" class="spotify-container">
+                            <div class="spotify-info">
+                                <div class="spot-icon"><i class="fab fa-spotify"></i></div>
+                                <div class="spot-text">
+                                    <span class="spot-label">LISTENING TO</span>
+                                    <span id="spotify-song">Nothing at the moment</span>
+                                </div>
+                            </div>
+                            <div class="spot-progress">
+                                <div id="spotify-bar" class="spot-bar-fill"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -75,37 +87,7 @@
         </div>
     </header>
 
-    <section id="projects" class="scroll-reveal">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="tab-container">
-            <button class="tab-btn active" onclick="filterProjects('all')">All</button>
-            <button class="tab-btn" onclick="filterProjects('coding')">Coding</button>
-            <button class="tab-btn" onclick="filterProjects('gaming')">Gaming</button>
-        </div>
-
-        <div class="projects-grid">
-            <div class="project-card coding scroll-reveal">
-                <div class="project-icon"><i class="fas fa-code"></i></div>
-                <h3>Advanced Discord Bot</h3>
-                <p>A high-performance bot with dashboard integration.</p>
-                <div class="project-tags"><span>Node.js</span><span>MongoDB</span></div>
-            </div>
-            <div class="project-card gaming scroll-reveal">
-                <div class="project-icon"><i class="fas fa-gamepad"></i></div>
-                <h3>Cyber Environment</h3>
-                <p>Immersive 3D map design for FPS titles.</p>
-                <div class="project-tags"><span>UE5</span><span>Blender</span></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="scroll-reveal">
-        <div class="about-card">
-            <h2>About Me</h2>
-            <p>I'm a passionate developer focused on creating clean, efficient, and beautiful digital solutions. My goal is to bridge the gap between functionality and aesthetics.</p>
-        </div>
-    </section>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
