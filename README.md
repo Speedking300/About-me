@@ -1,10 +1,6 @@
 # ⚡ BOLT DEV | Speedking
 
 <p align="center">
-  <img src="BOLTBanner-1.gif" alt="BOLT DEV Banner" width="100%">
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/badge/Age-13-blueviolet?style=for-the-badge" alt="Age">
   <img src="https://img.shields.io/badge/Role-Developer-00f2ff?style=for-the-badge" alt="Role">
   <img src="https://img.shields.io/badge/Focus-Web3%20%26%20Bots-9433ff?style=for-the-badge" alt="Focus">
